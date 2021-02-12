@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamad-AbassFlix</title>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet"  href="./style.css">
+</head>
+<body>
+    <nav>
+   
+            <div>
+                <div id="name">
+                    <a href="#">Mohamad-AbassFlix</a>
+                </div>
+                  
+                          
+                <div id="main_list">
+                    <ul>  
+                       <li> <input type="text" placeholder="Search for a movie" id="myInput" onkeyup="myFunction()"></li> 
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#"> About</a></li>
+                        <li><a href="#">Our Movies</a></li>
+                        <li><a href="login.html" target="_blank">Login</a></li>
+                        <li><a href="signUp.html" target="_blank">Sign up </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<div id="container" class="grid">
+<div  id="left">
+  
+    <h3>Our Movies </h3>
+    <ul id="myUL">
+        <li><a href="#">The Irishman</a></li>
+        <li><a href="#">Uncut Gems</a></li>
+      
+        <li><a href="#">V for Vendetta</a></li>
+        <li><a href="#">A Quiet Place</a></li>
+      
+        <li><a href="#">Lord of the Rings</a></li>
+        <li><a href="#">The Matrix</a></li>
+        <li><a href="#">Star Wars: Revelations </a></li>
+        <li><a href="#">The Notebook </a></li>
+      </ul>
+
+</div>
+<div  id="middle">
+   
+    <h2>Recommended for you</h2>
+    <img src="movies.jpg" alt="">
+
+</div>
+<div  id="right">
+   
+    <h3>New Series</h3>
+    <ul>
+        <li><a href="">Sweet Magnolias </a></li>
+        <li><a href="">Extraction</a></li>
+        <li><a href="">Dead To me</a></li>
+        <li><a href="">Fuller House</a></li>
+        <li><a href="">Control Z</a></li>
+        <li><a href="">The Wrong Missy</a></li>
+        <li><a href="">The Office</a></li>
+        <li><a href="">Friends </a></li>
+    </ul>
+</div>
+</div>
+<footer>
+    <p><a href="#">Help Center</a> | <a href="#">Contact Us</a> | <a href="#">Privacy</a> | <a href="#">Terms of Use</a> <br>
+    Copyright &copy; Mohamad El Habach - Abass Shalha  </p> </footer>
+    <script>
+        function myFunction() {
+     
+          let input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById('myInput');
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName('li');
+        
+ 
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+        </script>
+</body>
+</html>

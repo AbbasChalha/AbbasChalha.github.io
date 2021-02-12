@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up to Mohamad-AbassFlix </title>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="signUp.css">
+</head>
+<body>
+    
+    <div class="login-box">
+        <h1>Sign Up </h1>
+        <form action="signUp.php" method="POST" >
+          <div class="textbox">
+      
+            <input type="text" name="username" placeholder="Username">
+          </div>
+          <div class="textbox">
+        
+            <input type="email" name="email" placeholder="Enter your email">
+          </div>
+          
+          <div class="textbox">
+         
+            <input type="password" name="password" placeholder="Password" id="password">
+          </div>
+          
+  
+          <div class="textbox">
+            <input type="password" name="confirmpass" placeholder="Confirm Password " id="confirm">
+          </div>
+
+          <div class="textbox">
+              <input type="number" name="age" placeholder="Enter you age " id="age"> 
+            </div>
+
+          <input type="submit" class="btn" value="Create Your Account " onclick="checker()">
+        </form>
+        
+      </div>
+    
+      <script>
+          function checker(){
+            let str1 = document.getElementById("password").value;
+            let str2 = document.getElementById("confirm").value;
+            let age = document.getElementById("age").value;
+            if(str1 != str2)
+            window.alert("Passwords Don't match")
+            if(age<16)
+            window.alert("You have to be 16 or older to create an account ");
+            if(str1 == str2 && age>16)
+            window.alert("Your account has been created successfully! Welcome aboard ");
+          }
+      </script>
+</body>
+</html>
